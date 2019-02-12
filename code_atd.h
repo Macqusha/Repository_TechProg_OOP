@@ -10,6 +10,7 @@ namespace simple_codes {
 	// проверку интерфейса 
 	class code {
 	public:
+		char message[20];
 		// иденитфикация, порождение и ввод шифра из потока
 		static  code* In(ifstream &ifst);
 		virtual void InData(ifstream &ifst) = 0;  // ввод
