@@ -2,7 +2,6 @@
 #ifndef __container_atd__
 #define __container_atd__
 #include "code_atd.h"
-#include <string>
 namespace simple_codes {
 	// Простейший контейнер на основе одномерного массива
 	class container {
@@ -10,11 +9,11 @@ namespace simple_codes {
 		int len; // текущая длина
 		code *cont[max_len];
 	public:
-		void In(ifstream &ifst);     // ввод 
-		void Out(ofstream &ofst);    // вывод 
-		void Clear();  // очистка контейнера от шифров
-		container();    // инициализация контейнера
-		~container() { Clear(); } // утилизация контейнера
+		void In(ifstream &ifst);	// функция ввода 
+		void Out(ofstream &ofst);	// функция вывода
+		void Clear();	//очистка контейнера от шифров
+		container();	//инициализация контейнера
+		~container() { Clear(); } //утилизация контейнера
 	};
 } // end simple_codes namespace
 #endif

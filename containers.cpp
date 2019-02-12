@@ -1,5 +1,4 @@
 #include "container_atd.h"
-#include <string>
 namespace simple_codes {
 	// Инициализация контейнера
 	container::container() : len(0) { }

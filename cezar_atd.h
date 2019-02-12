@@ -1,7 +1,6 @@
 #pragma once
 #ifndef __cezar_atd__
 #define __cezar_atd__
-#include <string>
 // Требуется описание класса code
 #include "code_atd.h"
 namespace simple_codes {

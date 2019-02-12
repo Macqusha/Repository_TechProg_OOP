@@ -1,7 +1,6 @@
 #pragma once
 #ifndef __zamena_atd__
 #define __zamena_atd__
-#include <string>
 // Требеутся описание класса code
 #include "code_atd.h"
 namespace simple_codes {
