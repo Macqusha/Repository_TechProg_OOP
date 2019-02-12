@@ -8,10 +8,11 @@ namespace simple_codes {
 	// шифр цезаря
 	class cezar : public code {
 		int rot; // сдвиг
+		char message[20];//warning
 	public:
 		// переопределяем интерфейс класса
 		void InData(ifstream &ifst);  // ввод
-		void Out(ofstream &ofst, string open_text);     // вывод 
+		void Out(ofstream &ofst);     // вывод 
 		cezar() {} // создание без инициализации.
 	};
 } // end simple_codes namespace

@@ -7,11 +7,12 @@
 namespace simple_codes {
 	// шифр замены
 	class zamena : public code {
-		int rule; // ширина, высота, длина
+		int rule; // правило замены
+		char message[20];//warning
 	public:
 		// переопределяем интерфейс класса
 		void InData(ifstream &ifst);  // ввод
-		void Out(ofstream &ofst, string open_text);    // вывод 
+		void Out(ofstream &ofst);    // вывод 
 		zamena() {} // создание без инициализации.
 	};
 } // end simple_codes namespace

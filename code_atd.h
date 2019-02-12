@@ -13,7 +13,7 @@ namespace simple_codes {
 		// иденитфикация, порождение и ввод шифра из потока
 		static  code* In(ifstream &ifst);
 		virtual void InData(ifstream &ifst) = 0;  // ввод
-		virtual void Out(ofstream &ofst, string open_text) = 0;     // вывод
+		virtual void Out(ofstream &ofst) = 0;     // вывод
 	};
 } // end simple_codes namespace
 #endif

@@ -11,7 +11,7 @@ namespace simple_codes {
 		code *cont[max_len];
 	public:
 		void In(ifstream &ifst);     // ввод 
-		void Out(ofstream &ofst, string open_text);    // вывод 
+		void Out(ofstream &ofst);    // вывод 
 		void Clear();  // очистка контейнера от шифров
 		container();    // инициализация контейнера
 		~container() { Clear(); } // утилизация контейнера

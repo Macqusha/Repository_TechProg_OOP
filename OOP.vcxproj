@@ -156,7 +156,6 @@
     <ClInclude Include="zamena_atd.h" />
     <ClInclude Include="containers.h" />
     <ClInclude Include="container_atd.h" />
-    <ClInclude Include="pch.h" />
     <ClInclude Include="code_atd.h" />
     <ClInclude Include="cezar_atd.h" />
   </ItemGroup>
@@ -164,12 +163,6 @@
     <ClCompile Include="zamenas.cpp" />
     <ClCompile Include="containers.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="pch.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
     <ClCompile Include="codes.cpp" />
     <ClCompile Include="cezars.cpp" />
   </ItemGroup>

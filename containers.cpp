@@ -21,12 +21,12 @@ namespace simple_codes {
 	}
 
 	// Вывод содержимого контейнера
-	void container::Out(ofstream &ofst, string open_text) {
+	void container::Out(ofstream &ofst) {
 		ofst << "Container contents " << len
 			<< " elements." << endl;
 		for (int i = 0; i < len; i++) {
 			ofst << i << ": ";
-			cont[i]->Out(ofst,open_text);
+			cont[i]->Out(ofst);
 		}
 	}
 } // end simple_codes namespace

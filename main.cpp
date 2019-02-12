@@ -1,7 +1,6 @@
 ﻿// OOP.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
-//#include "pch.h"
 #include <iostream>
 #include <fstream>
 #include "container_atd.h"
@@ -12,7 +11,7 @@ namespace simple_codes {
 	// Сигнатуры требуемых внешних функций
 	void Clear();
 	void In(ifstream &ifst);
-	void Out(ofstream &ofst, string open_text);
+	void Out(ofstream &ofst);
 }
 using namespace std;
 
@@ -35,14 +34,11 @@ int main()
 		cout << "Ошибка с файлом";
 		return -1;
 	}
-	string open_text;
-	cout << "Enter open text (message):" << endl;
-	std::cin >> open_text;
 	cout << "Start" << endl;
 
 	simple_codes::container* begin = new simple_codes::container;
 	begin->In(in);
-	begin->Out(out,open_text);
+	begin->Out(out);
 
 	cout << "Stop" << endl;
 
