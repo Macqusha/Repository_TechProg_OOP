@@ -26,5 +26,11 @@ namespace simple_codes {
 		sp->InData(ifst);
 		return sp;
 	}
+
+	//-----------------------------------------------------
+		// Вывод данных только для шифра замены
+	void code::OutZamena(ofstream &ofst) {
+		ofst << endl; // пустая строка
+	}
 } // end simple_codes namespace
 

@@ -13,6 +13,9 @@ namespace simple_codes {
 		static  code* In(ifstream &ifst);
 		virtual void InData(ifstream &ifst) = 0;  // ввод
 		virtual void Out(ofstream &ofst) = 0;     // вывод
+		// вывод только шифров замены
+		virtual void OutZamena(ofstream &ofst);
 	};
+	
 } // end simple_codes namespace
 #endif

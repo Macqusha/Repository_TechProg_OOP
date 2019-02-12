@@ -49,4 +49,11 @@ namespace simple_codes {
 			<<", open = " << message 
 			<< ", code = " << codingZamena(message, rule) << "." << endl;
 	}
+
+
+	//-----------------------------------------------------
+	// Вывод данных только для шифров замены
+	void zamena::OutZamena(ofstream &ofst) {
+		Out(ofst);
+	}
 } // end simple_codes namespace
