@@ -11,6 +11,8 @@ namespace simple_codes {
 	public:
 		void In(ifstream &ifst);	// функция ввода 
 		void Out(ofstream &ofst);	// функция вывода
+		//вывод длины исходного текста
+		int MesLength(ofstream &ofst);
 		void Clear();	//очистка контейнера от шифров
 		container();	//инициализация контейнера
 		~container() { Clear(); } //утилизация контейнера

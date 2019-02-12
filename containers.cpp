@@ -19,6 +19,7 @@ namespace simple_codes {
 		}
 	}
 
+
 	// Вывод содержимого контейнера
 	void container::Out(ofstream &ofst) {
 		ofst << "Container contents " << len
@@ -26,6 +27,7 @@ namespace simple_codes {
 		for (int i = 0; i < len; i++) {
 			ofst << i << ": ";
 			cont[i]->Out(ofst);
+			ofst << "Length = " << cont[i]->MesLength() << endl;
 		}
 	}
 } // end simple_codes namespace

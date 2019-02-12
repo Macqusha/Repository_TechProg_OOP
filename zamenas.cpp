@@ -50,3 +50,13 @@ namespace simple_codes {
 			<< ", code = " << codingZamena(message, rule) << "." << endl;
 	}
 } // end simple_codes namespace
+
+namespace simple_codes {
+	//Вычисление длины исходного текста
+	int zamena::MesLength()
+	{
+		int length = 0;
+		while (message[length] != '\0' && length < 20) length++;
+		return length;
+	}
+} // end simple_codes namespace

@@ -13,6 +13,8 @@ namespace simple_codes {
 		static  code* In(ifstream &ifst);
 		virtual void InData(ifstream &ifst) = 0;  // ввод
 		virtual void Out(ofstream &ofst) = 0;     // вывод
+		virtual int MesLength() = 0; //Вычисление длины исходного когда
+		
 	};
 } // end simple_codes namespace
 #endif

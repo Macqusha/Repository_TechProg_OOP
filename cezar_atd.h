@@ -11,6 +11,7 @@ namespace simple_codes {
 		// переопределяем интерфейс класса
 		void InData(ifstream &ifst);  // ввод
 		void Out(ofstream &ofst);     // вывод 
+		int MesLength();
 		cezar() {} // создание без инициализации.
 	};
 } // end simple_codes namespace
