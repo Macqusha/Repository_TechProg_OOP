@@ -7,6 +7,7 @@ namespace simple_codes {
 	{
 		ifst >> rule;
 		ifst >> message;
+		ifst >> owner;
 	}
 } // end simple_codes namespace
 
@@ -47,6 +48,7 @@ namespace simple_codes {
 		if (rule == 3) rulename = "Keyword-change"; //шифр замены с кодовым словом SHIFRZAMENY
 		ofst << "It is Zamena: rule = " << rulename 
 			<<", open = " << message 
-			<< ", code = " << codingZamena(message, rule) << "." << endl;
+			<< ", code = " << codingZamena(message, rule)
+			<< ", owner = " << owner << "." << endl;
 	}
 } // end simple_codes namespace
