@@ -32,6 +32,7 @@ int main()
 	cout << "Start" << endl;
 	simple_codes::container* begin = new simple_codes::container;
 	begin->In(in);
+	begin->Sort();
 	begin->Out(out);
 	cout << "Stop" << endl;
 

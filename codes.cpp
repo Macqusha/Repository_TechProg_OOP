@@ -26,5 +26,11 @@ namespace simple_codes {
 		sp->InData(ifst);
 		return sp;
 	}
+
+	
+	// сравнение двух объектов
+	bool code::Compare(code &other) {
+		return MesLength() < other.MesLength();
+	}
 } // end simple_codes namespace
 

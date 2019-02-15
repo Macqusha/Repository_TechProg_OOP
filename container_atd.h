@@ -14,6 +14,7 @@ namespace simple_codes {
 		//вывод длины исходного текста
 		int MesLength(ofstream &ofst);
 		void Clear();	//очистка контейнера от шифров
+		void Sort(); // сортировка контейнера
 		container();	//инициализация контейнера
 		~container() { Clear(); } //утилизация контейнера
 	};

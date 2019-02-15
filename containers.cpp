@@ -30,4 +30,17 @@ namespace simple_codes {
 			ofst << "Length = " << cont[i]->MesLength() << endl;
 		}
 	}
+
+	// Сортировка содержимого контейнера
+	void container::Sort() {
+		for (int i = 0; i < len - 1; i++) {
+			for (int j = i + 1; j < len; j++) {
+				if (cont[i]->Compare(*cont[j])) {
+					code *tmp = cont[i];
+					cont[i] = cont[j];
+					cont[j] = tmp;
+				}
+			}
+		}
+	}
 } // end simple_codes namespace
