@@ -44,6 +44,8 @@ namespace simple_codes {
 	}
 
 	void container::OutZamena(ofstream &ofst) {
+		ofst << "Container contents " << len
+			<< " elements." << endl;
 		ofst << "Only zamena's." << endl;
 		for (int i = 0; i < len; i++) {
 			ofst << i << ": ";

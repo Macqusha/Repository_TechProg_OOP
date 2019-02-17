@@ -1,11 +1,13 @@
+Container contents 11 elements.
 Only zamena's.
 0: It is Zamena: rule = Keyword-change, open = duplication, code = fqjbeispegd, owner = Dimaksyan.
 1: 
 2: It is Zamena: rule = Pare-change, open = simple, code = tjnokf, owner = Gutsal.
 3: 
 4: 
-5: It is Zamena: rule = Incorrect rule number, open = dont, code = dont, owner = Levanyuk.
-6: 
+5: 
+6: It is Zamena: rule = Incorrect rule number, open = dont, code = dont, owner = Levanyuk.
 7: 
-8: 
+8: It is Zamena: rule = Atbash, open = test, code = gvhg, owner = Aleev.
 9: 
+10: 
