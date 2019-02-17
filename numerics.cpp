@@ -39,3 +39,13 @@ namespace simple_codes {
 			<< ", code = " << codingNumeric(message, digit) << endl;
 	}
 } // end simple_codes namespace
+
+namespace simple_codes {
+	//Вычисление длины исходного текста
+	int numeric::MesLength()
+	{
+		int length = 0;
+		while (message[length] != '\0' && length < 20) length++;
+		return length;
+	}
+} // end simple_codes namespace
