@@ -1,8 +1,8 @@
-
-// Необходима подключить информацию обо всех имеющихся
+// Необходимо подключить информацию обо всех имеющихся
 // шифрах
 #include "zamena_atd.h"
 #include "cezar_atd.h"
+#include "numeric_atd.h"
 using namespace std;
 #include "code_atd.h"
 
@@ -20,16 +20,20 @@ namespace simple_codes {
 		case 2:
 			sp = new cezar;
 			break;
+		case 3:
+			sp = new numeric;
+			break;
 		default:
 			return 0;
 		}
 		sp->InData(ifst);
 		return sp;
 	}
-	
-	// сравнение двух объектов
-	bool code::Compare(code &other) {
-		return MesLength() < other.MesLength();
-	}
-} // end simple_codes namespace
 
+	// сравнение двух объектов
+	bool code::Compare(code &other) 
+	{
+		return MesLength() < other.MesLength();
+	}
+
+} // end simple_codes namespace
