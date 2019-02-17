@@ -7,6 +7,7 @@ namespace simple_codes {
 	{
 		ifst >> digit;
 		ifst >> message;
+		ifst >> owner;
 	}
 } // end simple_codes namespace
 
@@ -36,7 +37,8 @@ namespace simple_codes {
 	{
 		ofst << "It is Numeric: digit = " << digit
 			<< ", open = " << message
-			<< ", code = " << codingNumeric(message, digit) << endl;
+			<< ", code = " << codingNumeric(message, digit) 
+			<< ", owner = " << owner << "." << endl;
 	}
 } // end simple_codes namespace
 
