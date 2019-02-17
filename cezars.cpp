@@ -35,7 +35,7 @@ namespace simple_codes {
 	{
 		ofst << "It is Cezar: rot = " << rot 
 			<< ", open = " << message 
-			<< ", code = " << codingCezar(message,rot) << endl;
+			<< ", code = " << codingCezar(message,rot) << "." << endl;
 	}
 } // end simple_codes namespace
 

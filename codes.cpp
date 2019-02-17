@@ -26,7 +26,6 @@ namespace simple_codes {
 		sp->InData(ifst);
 		return sp;
 	}
-
 	
 	// сравнение двух объектов
 	bool code::Compare(code &other) {
