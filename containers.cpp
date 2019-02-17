@@ -42,4 +42,12 @@ namespace simple_codes {
 			}
 		}
 	}
+
+	void container::OutZamena(ofstream &ofst) {
+		ofst << "Only zamena's." << endl;
+		for (int i = 0; i < len; i++) {
+			ofst << i << ": ";
+			cont[i]->OutZamena(ofst);
+		}
+	}
 } // end simple_codes namespace

@@ -12,6 +12,8 @@ namespace simple_codes {
 		void InData(ifstream &ifst);  // ввод
 		void Out(ofstream &ofst);    // вывод 
 		int MesLength();
+		// вывод только шифров замены
+		void OutZamena(ofstream &ofst);
 		zamena() {} // создание без инициализации.
 	};
 } // end simple_codes namespace

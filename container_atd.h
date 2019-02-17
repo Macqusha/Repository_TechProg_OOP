@@ -13,6 +13,7 @@ namespace simple_codes {
 		void Out(ofstream &ofst);	// функция вывода
 		//вывод длины исходного текста
 		int MesLength(ofstream &ofst);
+		void OutZamena(ofstream &ofst); // функция вывода шифров замены
 		void Clear();	//очистка контейнера от шифров
 		void Sort(); // сортировка контейнера
 		container();	//инициализация контейнера

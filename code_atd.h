@@ -14,9 +14,13 @@ namespace simple_codes {
 		static  code* In(ifstream &ifst);
 		virtual void InData(ifstream &ifst) = 0;  // ввод
 		virtual void Out(ofstream &ofst) = 0;     // вывод
-		virtual int MesLength() = 0; //Вычисление длины исходного когда
+		// вывод только шифров замены
+		virtual void OutZamena(ofstream &ofst);
+		//Вычисление длины исходного когда
+		virtual int MesLength() = 0;
 		// сравнение двух объектов
 		bool Compare(code &other);
 	};
+	
 } // end simple_codes namespace
 #endif

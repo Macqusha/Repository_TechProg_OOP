@@ -30,6 +30,12 @@ namespace simple_codes {
 		return sp;
 	}
 
+	// Вывод данных только для шифра замены
+	void code::OutZamena(ofstream &ofst) 
+	{
+		ofst << endl; // пустая строка
+	}
+
 	// сравнение двух объектов
 	bool code::Compare(code &other) 
 	{

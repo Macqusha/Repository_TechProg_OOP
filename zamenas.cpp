@@ -51,6 +51,13 @@ namespace simple_codes {
 			<< ", code = " << codingZamena(message, rule)
 			<< ", owner = " << owner << "." << endl;
 	}
+
+
+	//-----------------------------------------------------
+	// Вывод данных только для шифров замены
+	void zamena::OutZamena(ofstream &ofst) {
+		Out(ofst);
+	}
 } // end simple_codes namespace
 
 namespace simple_codes {
