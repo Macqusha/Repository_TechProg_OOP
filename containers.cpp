@@ -26,7 +26,7 @@ namespace simple_codes {
 		for (int i = 0; i < len; i++) {
 			ofst << i << ": ";
 			cont[i]->Out(ofst);
-			ofst << "   Length = " << cont[i]->MesLength() << endl;
+			ofst << "Length = " << cont[i]->MesLength() << "." << endl;
 		}
 	}
 
@@ -50,7 +50,7 @@ namespace simple_codes {
 		for (int i = 0; i < len; i++) {
 			ofst << i << ": ";
 			cont[i]->OutZamena(ofst);
-			//ofst << "   Length = " << cont[i]->MesLength() << endl;
+			ofst << "Length = " << cont[i]->MesLength() << "." << endl;
 		}
 	}
 } // end simple_codes namespace

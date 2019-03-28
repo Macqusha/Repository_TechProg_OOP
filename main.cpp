@@ -32,9 +32,15 @@ int main()
 	cout << "Start" << endl;
 	simple_codes::container* begin = new simple_codes::container;
 	begin->In(in);
+	out << "Filled container. " << endl;
 	begin->Sort();
-	//begin->Out(out);
+	begin->Out(out);
+	out << endl;
 	begin->OutZamena(out);
+	out << endl;
+	begin->Clear();
+	out << "Empty container. " << endl;
+	begin->Out(out);
 	cout << "Stop" << endl;
 
 	in.close();

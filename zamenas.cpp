@@ -12,8 +12,9 @@ namespace simple_codes {
 } // end simple_codes namespace
 
 using namespace std;
+const int maxStringeSize = 80;
 
-string codingZamena(char message[20], int rule)
+string codingZamena(char message[maxStringeSize], int rule)
 {
 	string alf = "abcdefghijklmnopqrstuvwxyz";
 	string SZ1 = "zyxwvutsrqponmlkjihgfedcba";
@@ -21,7 +22,7 @@ string codingZamena(char message[20], int rule)
 	string SZ3 = "shifrzamenybcdgjklopqtuvwx";
 	string str_mes = "";
 	int i = 0;
-	while ((message[i]) != '\n' && alf.find(tolower(message[i])) >= 0 && alf.find(tolower(message[i])) < 26 && i < 20)
+	while ((message[i]) != '\n' && alf.find(tolower(message[i])) >= 0 && alf.find(tolower(message[i])) < 26 && i < maxStringeSize)
 	{
 		str_mes += message[i];
 		i++;
@@ -49,9 +50,8 @@ namespace simple_codes {
 		ofst << "It is Zamena: rule = " << rulename 
 			<<", open = " << message 
 			<< ", code = " << codingZamena(message, rule)
-			<< ", owner = " << owner << "." << endl;
+			<< ", owner = " << owner << ". ";
 	}
-
 
 	//-----------------------------------------------------
 	// Вывод данных только для шифров замены
@@ -65,7 +65,7 @@ namespace simple_codes {
 	int zamena::MesLength()
 	{
 		int length = 0;
-		while (message[length] != '\0' && length < 20) length++;
+		while (message[length] != '\0' && length < maxStringeSize) length++;
 		return length;
 	}
 } // end simple_codes namespace

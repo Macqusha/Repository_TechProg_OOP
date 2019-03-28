@@ -33,7 +33,7 @@ namespace simple_codes {
 	// Вывод данных только для шифра замены
 	void code::OutZamena(ofstream &ofst) 
 	{
-		ofst << endl; // пустая строка
+		//ofst << endl; // пустая строка
 	}
 
 	// сравнение двух объектов

@@ -12,13 +12,13 @@ namespace simple_codes {
 } // end simple_codes namespace
 
 using namespace std;
-
-string codingCezar(char message[20], int rot)
+const int maxStringeSize = 80;
+string codingCezar(char message[maxStringeSize], int rot)
 {
 	string alf = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxy";
 	string str_mes = "";
 	int i = 0;
-	while ((message[i]) != '\n' && alf.find(tolower(message[i])) >= 0 && alf.find(tolower(message[i])) < 26 && i < 20)
+	while ((message[i]) != '\n' && alf.find(tolower(message[i])) >= 0 && alf.find(tolower(message[i])) < 26 && i < maxStringeSize)
 	{
 		str_mes += message[i];
 		i++;
@@ -37,7 +37,7 @@ namespace simple_codes {
 		ofst << "It is Cezar: rot = " << rot 
 			<< ", open = " << message 
 			<< ", code = " << codingCezar(message,rot)
-			<< ", owner = " << owner << "." << endl;
+			<< ", owner = " << owner << ". ";
 	}
 } // end simple_codes namespace
 
@@ -47,7 +47,7 @@ namespace simple_codes {
 		int cezar::MesLength()
 		{
 			int length = 0;
-			while (message[length] != '\0' && length < 20) length++;
+			while (message[length] != '\0' && length < maxStringeSize) length++;
 			return length;
 		}
 } // end simple_codes namespace
