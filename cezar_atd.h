@@ -6,8 +6,8 @@
 namespace simple_codes {
 	// шифр цезаря
 	class cezar : public code {
-		int rot; // сдвиг
 	public:
+		int rot; // сдвиг
 		// переопределяем интерфейс класса
 		void InData(ifstream &ifst);  // ввод
 		void Out(ofstream &ofst);     // вывод 

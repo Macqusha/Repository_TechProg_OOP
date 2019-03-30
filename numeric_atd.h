@@ -6,8 +6,8 @@
 namespace simple_codes {
 	// רטפנ קטסכמגמי
 	class numeric : public code {
-		int digit; // ןאנאלוענ רטפנא
 	public:
+		int digit; // ןאנאלוענ רטפנא
 		// ןונומןנוהוכÿול טםעונפויס ךכאססא
 		void InData(ifstream &ifst);  // גגמה
 		void Out(ofstream &ofst);     // גûגמה 

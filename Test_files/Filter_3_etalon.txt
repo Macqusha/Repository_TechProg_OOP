@@ -1,0 +1,5 @@
+Container contents 3 elements.
+Only zamena's.
+0: It is Zamena: rule = Atbash, open = keep, code = pvvk, owner = Aleev. Length = 4.
+1: Length = 2.
+2: Length = 6.

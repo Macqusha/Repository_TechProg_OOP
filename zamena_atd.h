@@ -6,8 +6,8 @@
 namespace simple_codes {
 	// шифр замены
 	class zamena : public code {
-		int rule; // правило замены
 	public:
+		int rule; // правило замены
 		// переопределяем интерфейс класса
 		void InData(ifstream &ifst);  // ввод
 		void Out(ofstream &ofst);    // вывод 
