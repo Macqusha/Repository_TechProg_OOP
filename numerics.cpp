@@ -1,6 +1,9 @@
 #include "numeric_atd.h"
 #include <string>
+
 using namespace std;
+const int maxStringeSize = 80;
+
 namespace simple_codes {
 	// Ввод параметров числового шифра 
 	void numeric::InData(ifstream &ifst)
@@ -9,13 +12,8 @@ namespace simple_codes {
 		ifst >> message;
 		ifst >> owner;
 	}
-} // end simple_codes namespace
 
-using namespace std;
-const int maxStringeSize = 80;
-
-namespace simple_codes {
-	string codingNumeric(char message[maxStringeSize], int digit)
+	string CodingNumeric(char message[maxStringeSize], int digit)
 	{
 		string alf = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxy";
 		string str_mes = "";
@@ -28,7 +26,7 @@ namespace simple_codes {
 		string str_result = "";
 		for (int i = 0; i < str_mes.length(); i++)
 		{
-			int tmp = alf.find(tolower(str_mes[i])); //номер текущего символа в alf
+			int tmp = alf.find(tolower(str_mes[i])); // Номер текущего символа в alf
 			if (tmp >= 0)
 				str_result += to_string((tmp + (digit % 26)) % 26);
 			else
@@ -36,21 +34,17 @@ namespace simple_codes {
 		}
 		return str_result;
 	}
-} // end simple_codes namespace
 
-namespace simple_codes {
 	// Вывод параметров числового шифра 
 	void numeric::Out(ofstream &ofst)
 	{
 		ofst << "It is Numeric: digit = " << digit
 			<< ", open = " << message
-			<< ", code = " << codingNumeric(message, digit) 
+			<< ", code = " << CodingNumeric(message, digit) 
 			<< ", owner = " << owner << ". ";
 	}
-} // end simple_codes namespace
 
-namespace simple_codes {
-	//Вычисление длины исходного текста
+	// Вычисление длины исходного текста
 	int numeric::MesLength()
 	{
 		int length = 0;

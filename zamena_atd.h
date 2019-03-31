@@ -4,17 +4,17 @@
 // Требеутся описание класса code
 #include "code_atd.h"
 namespace simple_codes {
-	// шифр замены
+	// Шифр замены
 	class zamena : public code {
 	public:
-		int rule; // правило замены
-		// переопределяем интерфейс класса
-		void InData(ifstream &ifst);  // ввод
-		void Out(ofstream &ofst);    // вывод 
+		int rule; // Правило замены
+		// Переопределяем интерфейс класса
+		void InData(ifstream &ifst);  // Ввод
+		void Out(ofstream &ofst);    // Вывод 
 		int MesLength();
-		// вывод только шифров замены
+		// Вывод только шифров замены
 		void OutZamena(ofstream &ofst);
-		zamena() {} // создание без инициализации.
+		zamena() {} // Создание без инициализации
 	};
 } // end simple_codes namespace
 #endif

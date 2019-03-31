@@ -1,6 +1,9 @@
 #include "zamena_atd.h"
 #include <string>
+
 using namespace std;
+const int maxStringeSize = 80;
+
 namespace simple_codes {
 	// Ввод параметров шифра замены
 	void zamena::InData(ifstream &ifst)
@@ -9,13 +12,8 @@ namespace simple_codes {
 		ifst >> message;
 		ifst >> owner;
 	}
-} // end simple_codes namespace
 
-using namespace std;
-const int maxStringeSize = 80;
-
-namespace simple_codes {
-	string codingZamena(char message[maxStringeSize], int rule)
+	string CodingZamena(char message[maxStringeSize], int rule)
 	{
 		string alf = "abcdefghijklmnopqrstuvwxyz";
 		string sz1 = "zyxwvutsrqponmlkjihgfedcba";
@@ -34,60 +32,54 @@ namespace simple_codes {
 			i++;
 		}
 
-		for (int i = 0; i < str_mes.length(); i++) {
-			int tmp = alf.find(str_mes[i]); //номер текущего символа в alf
-			if (tmp >= 0) {
-				if (rule == 1) {
+		for (int i = 0; i < str_mes.length(); i++)
+		{
+			int tmp = alf.find(str_mes[i]); // Номер текущего символа в alf
+			if (tmp >= 0) 
+			{
+				if (rule == 1)
 					str_mes[i] = sz1[tmp];
-				}
-				if (rule == 2) {
+				if (rule == 2)
 					str_mes[i] = sz2[tmp];
-				}
-				if (rule == 3) {
+				if (rule == 3)
 					str_mes[i] = sz3[tmp];
-				}
 			}
 
-			tmp = ALF.find(str_mes[i]); //номер текущего символа в ALF
-			if (tmp >= 0) {
-				if (rule == 1) {
+			tmp = ALF.find(str_mes[i]); // Номер текущего символа в ALF
+			if (tmp >= 0) 
+			{
+				if (rule == 1)
 					str_mes[i] = SZ1[tmp];
-				}
-				if (rule == 2) {
+				if (rule == 2)
 					str_mes[i] = SZ2[tmp];
-				}
-				if (rule == 3) {
+				if (rule == 3)
 					str_mes[i] = SZ3[tmp];
-				}
 			}
 		}
 		return str_mes;
 	}
-} // end simple_codes namespace
 
-namespace simple_codes {
 	// Вывод параметров шифра замены
 	void zamena::Out(ofstream &ofst)
 	{
 		string rulename = "Incorrect rule number";
-		if (rule == 1) rulename = "Atbash"; //Атбаш
-		if (rule == 2) rulename = "Pare-change"; //попарная замена
-		if (rule == 3) rulename = "Keyword-change"; //шифр замены с кодовым словом SHIFRZAMENY
+		if (rule == 1) rulename = "Atbash"; // Атбаш
+		if (rule == 2) rulename = "Pare-change"; // попарная замена
+		if (rule == 3) rulename = "Keyword-change"; // шифр замены с кодовым словом SHIFRZAMENY
 		ofst << "It is Zamena: rule = " << rulename 
 			<<", open = " << message 
-			<< ", code = " << codingZamena(message, rule)
+			<< ", code = " << CodingZamena(message, rule)
 			<< ", owner = " << owner << ". ";
 	}
 
-	//-----------------------------------------------------
+
 	// Вывод данных только для шифров замены
-	void zamena::OutZamena(ofstream &ofst) {
+	void zamena::OutZamena(ofstream &ofst) 
+	{
 		Out(ofst);
 	}
-} // end simple_codes namespace
 
-namespace simple_codes {
-	//Вычисление длины исходного текста
+	// Вычисление длины исходного текста
 	int zamena::MesLength()
 	{
 		int length = 0;

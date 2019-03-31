@@ -13,14 +13,14 @@ using namespace std;
 
 namespace simple_codes {
 	const int moreThanMax = maxStringeSize + 20;
-	//Сигнатуры используемых внешних функций
-	string codingCezar(char message[maxStringeSize], int rot);
-	string codingZamena(char message[maxStringeSize], int rule);
-	string codingNumeric(char message[maxStringeSize], int digit);	
+	// Сигнатуры используемых внешних функций
+	string CodingCezar(char message[maxStringeSize], int rot);
+	string CodingZamena(char message[maxStringeSize], int rule);
+	string CodingNumeric(char message[maxStringeSize], int digit);	
 } // end simple_codes namespace
 
-namespace coding_test {
-	TEST_CLASS(testing_codingCezar)
+namespace Coding_test {
+	TEST_CLASS(testing_CodingCezar)
 	{
 	public:
 
@@ -32,7 +32,7 @@ namespace coding_test {
 			for (int i = 0; i < maxStringeSize; i++)
 				message[i] = testMes[i];
 
-			string actual = codingCezar(message, rot);
+			string actual = CodingCezar(message, rot);
 			string expected = "AbcdeFG 123 %^&";
 
 			Assert::AreEqual(expected, actual);
@@ -46,7 +46,7 @@ namespace coding_test {
 			for (int i = 0; i < maxStringeSize; i++)
 				message[i] = testMes[i];
 
-			string actual = codingCezar(message, rot);
+			string actual = CodingCezar(message, rot);
 			string expected = "BcdefGH 123 %^&";
 
 			Assert::AreEqual(expected, actual);
@@ -60,7 +60,7 @@ namespace coding_test {
 			for (int i = 0; i < maxStringeSize; i++)
 				message[i] = testMes[i];
 
-			string actual = codingCezar(message, rot);
+			string actual = CodingCezar(message, rot);
 			string expected = "ZabcdEF 123 %^&";
 
 			Assert::AreEqual(expected, actual);
@@ -74,7 +74,7 @@ namespace coding_test {
 			for (int i = 0; i < maxStringeSize; i++)
 				message[i] = testMes[i];
 
-			string actual = codingCezar(message, rot);
+			string actual = CodingCezar(message, rot);
 			string expected = "AbcdeFG 123 %^&";
 
 			Assert::AreEqual(expected, actual);
@@ -88,14 +88,14 @@ namespace coding_test {
 			for (int i = 0; i < maxStringeSize; i++)
 				message[i] = testMes[i];
 
-			string actual = codingCezar(message, rot);
+			string actual = CodingCezar(message, rot);
 			string expected = "BcdefGH 123 %^&";
 
 			Assert::AreEqual(expected, actual);
 		}
 	};
 
-	TEST_CLASS(testing_codingZamena)
+	TEST_CLASS(testing_CodingZamena)
 	{
 	public:
 
@@ -107,7 +107,7 @@ namespace coding_test {
 			for (int i = 0; i < maxStringeSize; i++)
 				message[i] = testMes[i];
 
-			string actual = codingZamena(message, rule);
+			string actual = CodingZamena(message, rule);
 			string expected = "ZyxwvUT..bA 123 %^&";
 
 			Assert::AreEqual(expected, actual);
@@ -121,7 +121,7 @@ namespace coding_test {
 			for (int i = 0; i < maxStringeSize; i++)
 				message[i] = testMes[i];
 
-			string actual = codingZamena(message, rule);
+			string actual = CodingZamena(message, rule);
 			string expected = "BadcfEH..zY 123 %^&";
 
 			Assert::AreEqual(expected, actual);
@@ -135,7 +135,7 @@ namespace coding_test {
 			for (int i = 0; i < maxStringeSize; i++)
 				message[i] = testMes[i];
 
-			string actual = codingZamena(message, rule);
+			string actual = CodingZamena(message, rule);
 			string expected = "AbcdeFG..yZ 123 %^&";
 
 			Assert::AreEqual(expected, actual);
@@ -149,7 +149,7 @@ namespace coding_test {
 			for (int i = 0; i < maxStringeSize; i++)
 				message[i] = testMes[i];
 
-			string actual = codingZamena(message, rule);
+			string actual = CodingZamena(message, rule);
 			string expected = "ShifrZA..wX 123 %^&";
 
 			Assert::AreEqual(expected, actual);
@@ -163,14 +163,14 @@ namespace coding_test {
 			for (int i = 0; i < maxStringeSize; i++)
 				message[i] = testMes[i];
 
-			string actual = codingZamena(message, rule);
+			string actual = CodingZamena(message, rule);
 			string expected = "90 %(^& PROP";
 
 			Assert::AreEqual(expected, actual);
 		}
 	};
 
-	TEST_CLASS(testing_codingNumeric)
+	TEST_CLASS(testing_CodingNumeric)
 	{
 	public:
 
@@ -182,7 +182,7 @@ namespace coding_test {
 			for (int i = 0; i < maxStringeSize; i++)
 				message[i] = testMes[i];
 
-			string actual = codingNumeric(message, digit);
+			string actual = CodingNumeric(message, digit);
 			string expected = "012345678910111213141516171819202122232425 12390 !@#$%^&*";
 
 			Assert::AreEqual(expected, actual);
@@ -196,7 +196,7 @@ namespace coding_test {
 			for (int i = 0; i < maxStringeSize; i++)
 				message[i] = testMes[i];
 
-			string actual = codingNumeric(message, digit);
+			string actual = CodingNumeric(message, digit);
 			string expected = "123456789101112131415161718192021222324250 12390 !@#$%^&*";
 
 			Assert::AreEqual(expected, actual);
@@ -210,7 +210,7 @@ namespace coding_test {
 			for (int i = 0; i < maxStringeSize; i++)
 				message[i] = testMes[i];
 
-			string actual = codingNumeric(message, digit);
+			string actual = CodingNumeric(message, digit);
 			string expected = "250123456789101112131415161718192021222324 12390 !@#$%^&*";
 
 			Assert::AreEqual(expected, actual);
@@ -224,7 +224,7 @@ namespace coding_test {
 			for (int i = 0; i < maxStringeSize; i++)
 				message[i] = testMes[i];
 
-			string actual = codingNumeric(message, digit);
+			string actual = CodingNumeric(message, digit);
 			string expected = "012345678910111213141516171819202122232425 12390 !@#$%^&*";
 
 			Assert::AreEqual(expected, actual);
@@ -238,13 +238,13 @@ namespace coding_test {
 			for (int i = 0; i < maxStringeSize; i++)
 				message[i] = testMes[i];
 
-			string actual = codingNumeric(message, digit);
+			string actual = CodingNumeric(message, digit);
 			string expected = "123456789101112131415161718192021222324250 12390 !@#$%^&*";
 
 			Assert::AreEqual(expected, actual);
 		}
 	};
-} // end coding_test namespace
+} // end Coding_test namespace
 
 TEST_CLASS(testing_In_lower)
 {

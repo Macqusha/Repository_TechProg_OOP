@@ -1,14 +1,15 @@
-// Необходимо подключить информацию обо всех имеющихся
-// шифрах
+// Необходимо подключить информацию обо всех имеющихся шифрах
 #include "zamena_atd.h"
 #include "cezar_atd.h"
 #include "numeric_atd.h"
-using namespace std;
 #include "code_atd.h"
+
+using namespace std;
 
 namespace simple_codes {
 	// Ввод параметров обобщеннго шифра 
-	code* code::In(ifstream &ifst) {
+	code* code::In(ifstream &ifst) 
+	{
 		code *sp;
 		int k;
 		ifst >> k;
@@ -33,10 +34,10 @@ namespace simple_codes {
 	// Вывод данных только для шифра замены
 	void code::OutZamena(ofstream &ofst) 
 	{
-		//ofst << endl; // пустая строка
+		// ofst << endl; // Пустая строка
 	}
 
-	// сравнение двух объектов
+	// Сравнение двух объектов
 	bool code::Compare(code &other) 
 	{
 		return MesLength() < other.MesLength();

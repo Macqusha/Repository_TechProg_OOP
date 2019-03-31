@@ -4,22 +4,22 @@
 #include <fstream>
 using namespace std;
 namespace simple_codes {
-	// Класс, обобщающает все имеющиеся шифры.
+	// Класс, обобщающает все имеющиеся шифры
 	// Является абстрактным, обеспечивая, тем самым, проверку интерфейса 
 	const int maxStringeSize = 80;
 	class code {
 	public:
-		char message[maxStringeSize];//Warning. При изменении размера массива обратить внимание на условие (см. кодирование в zamenas.cpp и cezars.cpp)
-		char owner[maxStringeSize];//владелец текста
-		//иденитфикация, порождение и ввод шифра из потока
+		char message[maxStringeSize]; //Исходный текст
+		char owner[maxStringeSize];	// Владелец 
+		// Иденитфикация, порождение и ввод шифра из потока
 		static  code* In(ifstream &ifst);
-		virtual void InData(ifstream &ifst) = 0;  // ввод
-		virtual void Out(ofstream &ofst) = 0;     // вывод
-		// вывод только шифров замены
+		virtual void InData(ifstream &ifst) = 0;  // Ввод
+		virtual void Out(ofstream &ofst) = 0;     // Вывод
+		// Вывод только шифров замены
 		virtual void OutZamena(ofstream &ofst);
-		//Вычисление длины исходного когда
+		// Вычисление длины исходного кода
 		virtual int MesLength() = 0;
-		// сравнение двух объектов
+		// Сравнение двух объектов
 		bool Compare(code &other);
 	};
 	

@@ -4,15 +4,15 @@
 // Требуется описание класса code
 #include "code_atd.h"
 namespace simple_codes {
-	// шифр числовой
+	// Шифр числовой
 	class numeric : public code {
 	public:
-		int digit; // параметр шифра
+		int digit; // Параметр шифра
 		// переопределяем интерфейс класса
-		void InData(ifstream &ifst);  // ввод
-		void Out(ofstream &ofst);     // вывод 
+		void InData(ifstream &ifst);  // Ввод
+		void Out(ofstream &ofst);     // Вывод 
 		int MesLength();
-		numeric() {} // создание без инициализации.
+		numeric() {} // Создание без инициализации
 	};
 } // end simple_codes namespace
 #endif
