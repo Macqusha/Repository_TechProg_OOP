@@ -6,7 +6,7 @@ Container contents 14 elements.
 3: It is Cezar: rot = 8, open = repeat, code = zmxmib, owner = Nemkov. Length = 6.
 4: It is Cezar: rot = 5, open = stupid, code = xyzuni, owner = Dalinkevich. Length = 6.
 5: It is Cezar: rot = 26, open = evil, code = evil, owner = Klimkin. Length = 4.
-6: It is Zamena: rule = Incorrect rule number, open = dont, code = dont, owner = Levanyuk. Length = 4.
+6: It is Zamena: rule = Pare-change, open = dont, code = cpms, owner = Levanyuk. Length = 4.
 7: It is Numeric: digit = 1, open = keep, code = 115516, owner = Borisov. Length = 4.
 8: It is Zamena: rule = Atbash, open = test, code = gvhg, owner = Aleev. Length = 4.
 9: It is Numeric: digit = 1, open = bird, code = 29184, owner = User2. Length = 4.
@@ -23,7 +23,7 @@ Only zamena's.
 3: Length = 6.
 4: Length = 6.
 5: Length = 4.
-6: It is Zamena: rule = Incorrect rule number, open = dont, code = dont, owner = Levanyuk. Length = 4.
+6: It is Zamena: rule = Pare-change, open = dont, code = cpms, owner = Levanyuk. Length = 4.
 7: Length = 4.
 8: It is Zamena: rule = Atbash, open = test, code = gvhg, owner = Aleev. Length = 4.
 9: Length = 4.
