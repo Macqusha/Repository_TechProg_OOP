@@ -2,7 +2,7 @@
 #include <string>
 
 using namespace std;
-const int maxStringeSize = 80;
+const int MAX_STRING_SIZE = 80;
 
 namespace simple_codes {
 	// Âגמה ןאנאלוענמג רטפנא Öוחאנÿ
@@ -13,13 +13,13 @@ namespace simple_codes {
 		ifst >> owner;
 	}
 
-	string CodingCezar(char message[maxStringeSize], int rot)
+	string CodingCezar(char message[MAX_STRING_SIZE], int rot)
 	{
 		string alf = "abcdefghijklmnopqrstuvwxyz";
 		string ALF = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		string str_mes = "";
 		int i = 0;
-		while ((message[i]) != '\0' && i < maxStringeSize)
+		while ((message[i]) != '\0' && i < MAX_STRING_SIZE)
 		{
 			str_mes += message[i];
 			i++;
@@ -50,7 +50,7 @@ namespace simple_codes {
 	int cezar::MesLength()
 	{
 		int length = 0;
-		while (message[length] != '\0' && length < maxStringeSize) length++;
+		while (message[length] != '\0' && length < MAX_STRING_SIZE) length++;
 		return length;
 	}
 } // end simple_codes namespace

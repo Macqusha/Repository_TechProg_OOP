@@ -6,11 +6,11 @@ using namespace std;
 namespace simple_codes {
 	//  ласс, обобщающает все имеющиес€ шифры
 	// явл€етс€ абстрактным, обеспечива€, тем самым, проверку интерфейса 
-	const int maxStringeSize = 80;
+	const int MAX_STRING_SIZE = 80;
 	class code {
 	public:
-		char message[maxStringeSize]; //»сходный текст
-		char owner[maxStringeSize];	// ¬ладелец 
+		char message[MAX_STRING_SIZE]; //»сходный текст
+		char owner[MAX_STRING_SIZE];	// ¬ладелец 
 		// »денитфикаци€, порождение и ввод шифра из потока
 		static  code* In(ifstream &ifst);
 		virtual void InData(ifstream &ifst) = 0;  // ¬вод
