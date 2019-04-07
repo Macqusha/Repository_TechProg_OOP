@@ -15,6 +15,7 @@ namespace simple_codes {
 		virtual void MultiMethod(code *other, ofstream &ofst);
 		virtual void MMZamena(ofstream &ofst);
 		virtual void MMCezar(ofstream &ofst);
+		virtual void MMNumeric(ofstream &ofst);
 		zamena() {} // создание без инициализации.
 	};
 } // end simple_codes namespace

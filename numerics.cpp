@@ -1,18 +1,18 @@
-#include "cezar_atd.h"
+#include "numeric_atd.h"
 #include <string>
 using namespace std;
 namespace simple_codes {
-	// Ввод параметров шифра Цезаря
-	void cezar::InData(ifstream &ifst) 
+	// Ввод параметров числового шифра 
+	void numeric::InData(ifstream &ifst)
 	{
-		ifst >> rot;
+		ifst >> digit;
 		ifst >> message;
 	}
 } // end simple_codes namespace
 
 using namespace std;
 
-string codingCezar(char message[20], int rot)
+string codingNumeric(char message[20], int digit)
 {
 	string alf = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxy";
 	string str_mes = "";
@@ -22,35 +22,36 @@ string codingCezar(char message[20], int rot)
 		str_mes += message[i];
 		i++;
 	}
+	string str_result = "";
 	for (int i = 0; i < str_mes.length(); i++) {
 		int tmp = alf.find(tolower(str_mes[i])); //номер текущего символа в alf
 		if (tmp >= 0)
-			str_mes[i] = alf[tmp + (rot % 26)];
+			str_result += to_string((tmp + (digit % 26)) % 26);
 	}
-	return str_mes;
+	return str_result;
 }
 namespace simple_codes {
-	// Вывод параметров шифра Цезаря
-	void cezar::Out(ofstream &ofst)
+	// Вывод параметров числового шифра 
+	void numeric::Out(ofstream &ofst)
 	{
-		ofst << "It is Cezar: rot = " << rot 
-			<< ", open = " << message 
-			<< ", code = " << codingCezar(message,rot) << endl;
+		ofst << "It is Numeric: digit = " << digit
+			<< ", open = " << message
+			<< ", code = " << codingNumeric(message, digit) << endl;
 	}
 
 	// мультиметод
-	void cezar::MultiMethod(code *other, ofstream &ofst) {
-		other->MMCezar(ofst);
+	void numeric::MultiMethod(code *other, ofstream &ofst) {
+		other->MMNumeric(ofst);
 	}
 	//-----------------------------------------------------
-	void cezar::MMZamena(ofstream &ofst) {
-		ofst << "Zamena and Cezar" << endl;
+	void numeric::MMZamena(ofstream &ofst) {
+		ofst << "Zamena and Numeric" << endl;
 	}
 	//-----------------------------------------------------
-	void cezar::MMCezar(ofstream &ofst) {
-		ofst << "Cezar and Cezar" << endl;
+	void numeric::MMCezar(ofstream &ofst) {
+		ofst << "Cezar and Numeric" << endl;
 	}	//-----------------------------------------------------
-	void cezar::MMNumeric(ofstream &ofst) {
-		ofst << "Numeric and Cezar" << endl;
+	void numeric::MMNumeric(ofstream &ofst) {
+		ofst << "Numeric and Numeric" << endl;
 	}
 } // end simple_codes namespace

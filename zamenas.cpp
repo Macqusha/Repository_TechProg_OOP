@@ -53,13 +53,15 @@ namespace simple_codes {
 	// мультиметод
 	void zamena::MultiMethod(code *other, ofstream &ofst) {
 		other->MMZamena(ofst);
-	}		// Вывод двух прямоугольников
+	}	
 	void zamena::MMZamena(ofstream &ofst) {
 		ofst << "Zamena and Zamena" << endl;
 	}
 	//-----------------------------------------------------
-	// Вывод треугольника и прямоугольника
 	void zamena::MMCezar(ofstream &ofst) {
 		ofst << "Cezar and Zamena" << endl;
-	}
+	}	//-----------------------------------------------------
+	void zamena::MMNumeric(ofstream &ofst) {
+		ofst << "Numeric and Zamena" << endl;
+	}
 } // end simple_codes namespace

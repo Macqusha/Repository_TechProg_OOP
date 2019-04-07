@@ -153,12 +153,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="numeric_atd.h" />
     <ClInclude Include="zamena_atd.h" />
     <ClInclude Include="container_atd.h" />
     <ClInclude Include="code_atd.h" />
     <ClInclude Include="cezar_atd.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="numerics.cpp" />
     <ClCompile Include="zamenas.cpp" />
     <ClCompile Include="containers.cpp" />
     <ClCompile Include="main.cpp" />

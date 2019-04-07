@@ -1,6 +1,9 @@
 1
 1
 keep
+3
+2
+numeric
 2
 3
 it

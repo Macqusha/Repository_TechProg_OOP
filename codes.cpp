@@ -3,6 +3,7 @@
 // шифрах
 #include "zamena_atd.h"
 #include "cezar_atd.h"
+#include "numeric_atd.h"
 using namespace std;
 #include "code_atd.h"
 
@@ -19,6 +20,9 @@ namespace simple_codes {
 			break;
 		case 2:
 			sp = new cezar;
+			break;
+		case 3:
+			sp = new numeric;
 			break;
 		default:
 			return 0;
