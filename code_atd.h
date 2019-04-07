@@ -21,6 +21,11 @@ namespace simple_codes {
 		virtual int MesLength() = 0;
 		// Сравнение двух объектов
 		bool Compare(code &other);
+		// Мультиметод
+		virtual void MultiMethod(code *other, ofstream &ofst) = 0;
+		virtual void MMZamena(ofstream &ofst) = 0;
+		virtual void MMCezar(ofstream &ofst) = 0;
+		virtual void MMNumeric(ofstream &ofst) = 0;
 	};
 	
 } // end simple_codes namespace

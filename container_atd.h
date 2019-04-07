@@ -16,6 +16,8 @@ namespace simple_codes {
 		void OutZamena(ofstream &ofst); // Функция вывода шифров замены
 		void Clear();	// Очистка контейнера от шифров
 		void Sort(); // Сортировка контейнера
+		// Вызов мультиметода для элементов контейнера
+		void MultiMethod(ofstream &ofst);
 		container();	// Инициализация контейнера
 		~container() { Clear(); } // утилизация контейнера
 	};

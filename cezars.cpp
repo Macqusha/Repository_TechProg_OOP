@@ -53,4 +53,26 @@ namespace simple_codes {
 		while (message[length] != '\0' && length < MAX_STRING_SIZE) length++;
 		return length;
 	}
+
+	//Ìףכüעטלועמה
+	void cezar::MultiMethod(code *other, ofstream &ofst) 
+	{
+		other->MMCezar(ofst);
+	}
+
+	void cezar::MMZamena(ofstream &ofst) 
+	{
+		ofst << "Zamena and Cezar" << endl;
+	}
+	
+	void cezar::MMCezar(ofstream &ofst) 
+	{
+		ofst << "Cezar and Cezar" << endl;
+	}
+
+	void cezar::MMNumeric(ofstream &ofst) 
+	{
+		ofst << "Numeric and Cezar" << endl;
+	}
+
 } // end simple_codes namespace

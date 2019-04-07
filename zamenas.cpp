@@ -86,4 +86,25 @@ namespace simple_codes {
 		while (message[length] != '\0' && length < MAX_STRING_SIZE) length++;
 		return length;
 	}
+
+	// Ìףכüעטלועמה
+	void zamena::MultiMethod(code *other, ofstream &ofst) 
+	{
+		other->MMZamena(ofst);
+	}
+
+	void zamena::MMZamena(ofstream &ofst)
+	{
+		ofst << "Zamena and Zamena" << endl;
+	}
+
+	void zamena::MMCezar(ofstream &ofst) 
+	{
+		ofst << "Cezar and Zamena" << endl;
+	}
+
+	void zamena::MMNumeric(ofstream &ofst) 
+	{
+		ofst << "Numeric and Zamena" << endl;
+	}
 } // end simple_codes namespace

@@ -102,6 +102,8 @@ int main(int argc, char* argv[])
 	ofst << endl;
 	begin->OutZamena(ofst);
 	ofst << endl;
+	begin->MultiMethod(ofst);
+	ofst << endl;
 	begin->Clear();
 	ofst << "Empty container. " << endl;
 	begin->Out(ofst);

@@ -12,6 +12,11 @@ namespace simple_codes {
 		void InData(ifstream &ifst);  // Ввод
 		void Out(ofstream &ofst);     // Вывод 
 		int MesLength();
+		// Мультиметод
+		virtual void MultiMethod(code *other, ofstream &ofst);
+		virtual void MMZamena(ofstream &ofst);
+		virtual void MMCezar(ofstream &ofst);
+		virtual void MMNumeric(ofstream &ofst);
 		numeric() {} // Создание без инициализации
 	};
 } // end simple_codes namespace

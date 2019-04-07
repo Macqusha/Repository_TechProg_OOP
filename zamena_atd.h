@@ -14,6 +14,11 @@ namespace simple_codes {
 		int MesLength();
 		// Вывод только шифров замены
 		void OutZamena(ofstream &ofst);
+		// Мультиметод
+		virtual void MultiMethod(code *other, ofstream &ofst);
+		virtual void MMZamena(ofstream &ofst);
+		virtual void MMCezar(ofstream &ofst);
+		virtual void MMNumeric(ofstream &ofst);
 		zamena() {} // Создание без инициализации
 	};
 } // end simple_codes namespace
