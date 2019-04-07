@@ -33,6 +33,8 @@ int main()
 	simple_codes::container* begin = new simple_codes::container;
 	begin->In(in);
 	begin->Out(out);
+	out << endl;
+	begin->MultiMethod(out);
 	cout << "Stop" << endl;
 
 	in.close();

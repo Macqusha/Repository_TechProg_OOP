@@ -11,6 +11,10 @@ namespace simple_codes {
 		// переопределяем интерфейс класса
 		void InData(ifstream &ifst);  // ввод
 		void Out(ofstream &ofst);    // вывод 
+		// мультиметод
+		virtual void MultiMethod(code *other, ofstream &ofst);
+		virtual void MMZamena(ofstream &ofst);
+		virtual void MMCezar(ofstream &ofst);
 		zamena() {} // создание без инициализации.
 	};
 } // end simple_codes namespace

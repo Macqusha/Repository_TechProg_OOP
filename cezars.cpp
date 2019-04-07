@@ -37,4 +37,19 @@ namespace simple_codes {
 			<< ", open = " << message 
 			<< ", code = " << codingCezar(message,rot) << endl;
 	}
+
+	// мультиметод
+	void cezar::MultiMethod(code *other, ofstream &ofst) {
+		other->MMCezar(ofst);
+	}
+	//-----------------------------------------------------
+	// Вывод прямоугольника и треугольника
+	void cezar::MMZamena(ofstream &ofst) {
+		ofst << "Zamena and Cezar" << endl;
+	}
+	//-----------------------------------------------------
+	// Вывод двух треугольников
+	void cezar::MMCezar(ofstream &ofst) {
+		ofst << "Cezar and Cezar" << endl;
+	}
 } // end simple_codes namespace

@@ -49,4 +49,17 @@ namespace simple_codes {
 			<<", open = " << message 
 			<< ", code = " << codingZamena(message, rule) << "." << endl;
 	}
+
+	// мультиметод
+	void zamena::MultiMethod(code *other, ofstream &ofst) {
+		other->MMZamena(ofst);
+	}		// Вывод двух прямоугольников
+	void zamena::MMZamena(ofstream &ofst) {
+		ofst << "Zamena and Zamena" << endl;
+	}
+	//-----------------------------------------------------
+	// Вывод треугольника и прямоугольника
+	void zamena::MMCezar(ofstream &ofst) {
+		ofst << "Cezar and Zamena" << endl;
+	}
 } // end simple_codes namespace

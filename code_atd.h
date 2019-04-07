@@ -13,6 +13,10 @@ namespace simple_codes {
 		static  code* In(ifstream &ifst);
 		virtual void InData(ifstream &ifst) = 0;  // ввод
 		virtual void Out(ofstream &ofst) = 0;     // вывод
+		// мультиметод
+		virtual void MultiMethod(code *other, ofstream &ofst) = 0;
+		virtual void MMZamena(ofstream &ofst) = 0;
+		virtual void MMCezar(ofstream &ofst) = 0;
 	};
 } // end simple_codes namespace
 #endif

@@ -12,6 +12,8 @@ namespace simple_codes {
 		void In(ifstream &ifst);	// функция ввода 
 		void Out(ofstream &ofst);	// функция вывода
 		void Clear();	//очистка контейнера от шифров
+		// Вызов мультиметода для элементов контейнера
+		void MultiMethod(ofstream &ofst);
 		container();	//инициализация контейнера
 		~container() { Clear(); } //утилизация контейнера
 	};
