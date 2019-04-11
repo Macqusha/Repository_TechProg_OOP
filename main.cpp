@@ -95,7 +95,7 @@ int main(int argc, char* argv[])
 
 	cout << "Start" << endl;
 	simple_codes::container* begin = new simple_codes::container;
-	begin->In(ifst);
+begin->In(ifst);
 	ofst << "Filled container. " << endl;
 	begin->Sort();
 	begin->Out(ofst);
